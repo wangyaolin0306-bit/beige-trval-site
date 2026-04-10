@@ -34,6 +34,50 @@
         return localStorage.getItem('beige-language') || 'en';
     }
 
+    function getI18nText(lang, key, fallback) {
+        if (typeof i18n !== 'undefined' && i18n[lang] && i18n[lang][key]) {
+            return i18n[lang][key];
+        }
+        return fallback || '';
+    }
+
+    function localizeAgeRange(value, lang) {
+        var text = String(value || '').trim();
+
+        if (!text) return '';
+        if (lang === 'zh') return text;
+
+        if (lang === 'th') {
+            return text
+                .replace(/个月/g, ' เดือน')
+                .replace(/岁/g, ' ปี')
+                .replace(/年/g, ' ปี');
+        }
+
+        return text
+            .replace(/个月/g, ' months')
+            .replace(/岁/g, ' years')
+            .replace(/年/g, ' years');
+    }
+
+    function localizeCapacity(value, lang) {
+        var text = String(value || '').trim();
+
+        if (!text) return '';
+        if (lang === 'zh') return text;
+        if (lang === 'th') {
+            return text.replace(/kg/ig, 'กก.');
+        }
+        return text;
+    }
+
+    function setTextById(id, value) {
+        var node = document.getElementById(id);
+        if (node) {
+            node.textContent = value;
+        }
+    }
+
     function escapeHtml(value) {
         return String(value || '')
             .replace(/&/g, '&amp;')
@@ -664,18 +708,16 @@
             specs = product.specs[lang] || product.specs.en || '';
             specInfo = parseSpecs(specs);
 
-            if (document.getElementById('specDimensions')) {
-                document.getElementById('specDimensions').textContent = specInfo.dimensions;
-            }
-            if (document.getElementById('specWeight')) {
-                document.getElementById('specWeight').textContent = specInfo.weight;
-            }
-            if (document.getElementById('specAge')) {
-                document.getElementById('specAge').textContent = product.age || '';
-            }
-            if (document.getElementById('specCapacity')) {
-                document.getElementById('specCapacity').textContent = product.maxWeight || '';
-            }
+            setTextById('specsTitle', getI18nText(lang, 'product.specsTitle', 'Specifications'));
+            setTextById('specDimensionsLabel', getI18nText(lang, 'product.spec.dimensions', 'Dimensions'));
+            setTextById('specWeightLabel', getI18nText(lang, 'product.spec.weight', 'Weight'));
+            setTextById('specAgeLabel', getI18nText(lang, 'product.spec.age', 'Age Range'));
+            setTextById('specCapacityLabel', getI18nText(lang, 'product.spec.capacity', 'Weight Capacity'));
+
+            setTextById('specDimensions', specInfo.dimensions);
+            setTextById('specWeight', specInfo.weight);
+            setTextById('specAge', localizeAgeRange(product.age || '', lang));
+            setTextById('specCapacity', localizeCapacity(product.maxWeight || '', lang));
 
             for (i = 0; i < featureIds.length; i++) {
                 var featureNode = document.getElementById(featureIds[i]);

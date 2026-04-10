@@ -24,6 +24,50 @@ function parseSpecs(specStr) {
     };
 }
 
+function getI18nText(lang, key, fallback) {
+    if (typeof i18n !== 'undefined' && i18n[lang] && i18n[lang][key]) {
+        return i18n[lang][key];
+    }
+    return fallback || '';
+}
+
+function localizeAgeRange(value, lang) {
+    var text = String(value || '').trim();
+
+    if (!text) return '';
+    if (lang === 'zh') return text;
+
+    if (lang === 'th') {
+        return text
+            .replace(/个月/g, ' เดือน')
+            .replace(/岁/g, ' ปี')
+            .replace(/年/g, ' ปี');
+    }
+
+    return text
+        .replace(/个月/g, ' months')
+        .replace(/岁/g, ' years')
+        .replace(/年/g, ' years');
+}
+
+function localizeCapacity(value, lang) {
+    var text = String(value || '').trim();
+
+    if (!text) return '';
+    if (lang === 'zh') return text;
+    if (lang === 'th') {
+        return text.replace(/kg/ig, 'กก.');
+    }
+    return text;
+}
+
+function setTextById(id, value) {
+    var node = document.getElementById(id);
+    if (node) {
+        node.textContent = value;
+    }
+}
+
 function loadProductDetail(productId) {
     var product = productData[productId];
     if (!product) {
@@ -46,14 +90,15 @@ function loadProductDetail(productId) {
     }
     var sp = product.specs[lang] || product.specs.en || '';
     var spInfo = parseSpecs(sp);
-    var dimEl = document.getElementById('specDimensions');
-    var wtEl = document.getElementById('specWeight');
-    var ageEl = document.getElementById('specAge');
-    var capEl = document.getElementById('specCapacity');
-    if (dimEl) dimEl.textContent = spInfo.dimensions;
-    if (wtEl) wtEl.textContent = spInfo.weight;
-    if (ageEl) ageEl.textContent = product.age || '';
-    if (capEl) capEl.textContent = product.maxWeight || '';
+    setTextById('specsTitle', getI18nText(lang, 'product.specsTitle', 'Specifications'));
+    setTextById('specDimensionsLabel', getI18nText(lang, 'product.spec.dimensions', 'Dimensions'));
+    setTextById('specWeightLabel', getI18nText(lang, 'product.spec.weight', 'Weight'));
+    setTextById('specAgeLabel', getI18nText(lang, 'product.spec.age', 'Age Range'));
+    setTextById('specCapacityLabel', getI18nText(lang, 'product.spec.capacity', 'Weight Capacity'));
+    setTextById('specDimensions', spInfo.dimensions);
+    setTextById('specWeight', spInfo.weight);
+    setTextById('specAge', localizeAgeRange(product.age || '', lang));
+    setTextById('specCapacity', localizeCapacity(product.maxWeight || '', lang));
     var featEls = ['feature-0','feature-1','feature-2','feature-3','feature-4'];
     for (var j = 0; j < featEls.length; j++) {
         var fel = document.getElementById(featEls[j]);

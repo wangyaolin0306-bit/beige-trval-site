@@ -32,6 +32,14 @@
 - Output Directory: `/`
 - Framework Preset: `Other`
 
+如果是 Cloudflare Pages，建议改成：
+
+- Build Command: `bash build.sh`
+- Build output directory: `dist`
+- Root directory: 留空
+
+这样会先把站点复制到干净的 `dist/`，避免把 `.git` 一起打包上传。
+
 ## 商品图片上传规则
 
 商品卡主图和详情页四张图都按固定目录读取：

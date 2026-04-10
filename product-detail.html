@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail | beige Premium Baby Travel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500&family=IBM+Plex+Sans+Thai:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/beige logo.png?v=20260402" alt="beige" class="logo-img">
+            </a>
+            
+            <button class="hamburger-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="mobile-nav-overlay"></div>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav.about">About Beige</a></li>
+                <li class="dropdown">
+                    <a href="collections.html" data-i18n="nav.collections">Collections</a>
+                                        <ul class="dropdown-menu">
+                        <li><a href="collections.html#strollers" data-i18n="nav.strollers">Strollers</a></li>
+                        <li><a href="collections.html#carseats" data-i18n="nav.carseats">Car Seats</a></li>
+                        <li><a href="collections.html#walkers" data-i18n="nav.walkers">Baby Walkers</a></li>
+                        <li><a href="collections.html#carriers" data-i18n="nav.carriers">Carriers</a></li>
+                        <li><a href="collections.html#outdoor" data-i18n="nav.outdoor">Outdoor</a></li>
+                        <li><a href="collections.html#mombags" data-i18n="nav.mombags">Mom Bags</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="th">TH</button>
+                    <button class="lang-btn" data-lang="zh">中文</button>
+                </div>
+                <button class="mobile-toggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-layout">
+                <!-- Product Images -->
+                <div class="product-images">
+                    <div class="gallery-wrapper">
+                        <button class="gallery-btn gallery-prev" id="galleryPrev" aria-label="Previous image">‹</button>
+                        <div class="main-image">
+                            <div class="image-placeholder large" id="mainImagePlaceholder">
+                                <img id="mainImage" src="" alt="Product image" style="display:none; width:100%; height:100%; object-fit:contain;">
+                                <span id="mainImageText">[PRODUCT MAIN IMAGE — IMG 1]</span>
+                                <small data-i18n="product.imageHint">Recommended: 800×800px or 750×1000px, white/cream background</small>
+                            </div>
+                        </div>
+                        <button class="gallery-btn gallery-next" id="galleryNext" aria-label="Next image">›</button>
+                    </div>
+                    <div class="gallery-indicator" id="galleryIndicator">
+                        <span class="indicator-dot active" data-index="0"></span>
+                        <span class="indicator-dot" data-index="1"></span>
+                        <span class="indicator-dot" data-index="2"></span>
+                        <span class="indicator-dot" data-index="3"></span>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info-detail">
+                    <span class="product-category" id="productCategory">Stroller</span>
+                    <h1 class="product-name" id="productName">Dining Tray Stroller</h1>
+                    <p class="product-tagline" id="productTagline">Compact travel companion with meal-ready convenience</p>
+                    
+                    <div class="product-highlights" id="productHighlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">✓</span>
+                            <span class="highlight-text">Loading...</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">✓</span>
+                            <span class="highlight-text">Loading...</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">✓</span>
+                            <span class="highlight-text">Loading...</span>
+                        </div>
+                    </div>
+
+                    <div class="product-specs-detail">
+                        <h3 class="specs-title">Specifications</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">Dimensions</span>
+                                <span class="spec-value spec-dimensions" id="specDimensions">Loading...</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Weight</span>
+                                <span class="spec-value spec-weight" id="specWeight">Loading...</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Age Range</span>
+                                <span class="spec-value spec-age" id="specAge">Loading...</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Weight Capacity</span>
+                                <span class="spec-value spec-capacity" id="specCapacity">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-features-detail" id="productFeaturesDetail">
+                        <h3 class="features-title">Key Features</h3>
+                        <ul class="features-list">
+                            <li class="feature-item" id="feature-0">Loading...</li>
+                            <li class="feature-item" id="feature-1">Loading...</li>
+                            <li class="feature-item" id="feature-2">Loading...</li>
+                            <li class="feature-item" id="feature-3">Loading...</li>
+                            <li class="feature-item" id="feature-4">Loading...</li>
+                        </ul>
+                    </div>
+
+                    <!-- Coupon Section -->
+                    <div class="coupon-section">
+                        <!-- Shopee Coupon -->
+                        <div class="coupon-card coupon-shopee">
+                            <div class="coupon-card-icon">
+                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="22" cy="22" r="22" fill="#EE4D2D"/><text x="22" y="29" text-anchor="middle" font-size="18" fill="white" font-weight="bold">S</text></svg>
+                            </div>
+                            <div class="coupon-card-info">
+                                <div class="coupon-card-title">Shopee</div>
+                                <div class="coupon-card-desc" data-i18n="product.coupon.shopee">Discount available</div>
+                                <div class="coupon-code-display-wrap">
+                                <div class="coupon-code-display">BEIGASFAS</div>
+                                <span class="coupon-amount">-฿10</span>
+                            </div>
+                            </div>
+                            <div class="coupon-card-action">
+                                <button class="btn-copy-coupon" data-i18n="product.coupon.copy" onclick="copyCoupon(this)">Copy</button>
+                            </div>
+                        </div>
+                        <!-- TikTok Coupon -->
+                        <div class="coupon-card coupon-tiktok" id="tiktok-coupon-block" style="display:none">
+                            <div class="coupon-card-icon">
+                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="22" cy="22" r="22" fill="#000"/><text x="22" y="29" text-anchor="middle" font-size="16" fill="white" font-weight="bold">♪</text></svg>
+                            </div>
+                            <div class="coupon-card-info">
+                                <div class="coupon-card-title">TikTok</div>
+                                <div class="coupon-card-desc" data-i18n="product.coupon.tiktok">Discount available</div>
+                                <div class="coupon-code-display" id="tiktok-coupon-code"></div><span class="coupon-amount" id="tiktok-coupon-amount">-฿15</span>
+                            </div>
+                            <div class="coupon-card-action">
+                                <button class="btn-copy-coupon" data-i18n="product.coupon.copy" onclick="copyCoupon(this)">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Buy Buttons -->
+                    <div class="product-actions-detail">
+                        <a href="#" target="_blank" rel="noopener" class="btn btn-primary btn-large buy-btn buy-shopee" id="buyBtn">Buy on Shopee</a>
+                        <a href="#" target="_blank" rel="noopener" class="btn btn-secondary btn-large buy-btn buy-tiktok" id="tiktokBtn">Buy on TikTok</a>
+                    </div>
+                    
+                    <div class="back-link">
+                        <a href="collections.html" class="btn-text back-to-list">← Back to Collections</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2 class="section-title center related-title">You May Also Like</h2>
+            <div class="related-grid" id="relatedGrid"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <p class="footer-tagline" data-i18n="footer.tagline">Gentle design for modern family travel</p>
+                </div>
+                <div class="footer-nav">
+                    <h4 data-i18n="footer.products">Products</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="nav.strollers">Strollers</a></li>
+                        <li><a href="#" data-i18n="nav.carseats">Car Seats</a></li>
+                        <li><a href="#" data-i18n="nav.walkers">Baby Walkers</a></li>
+                        <li><a href="#" data-i18n="nav.carriers">Carriers</a></li>
+                        <li><a href="#" data-i18n="nav.outdoor">Outdoor</a></li>
+                        <li><a href="#" data-i18n="nav.mombags">Mom Bags</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 beige. <span data-i18n="footer.rights">All rights reserved.</span></p>
+                <div class="footer-lang">
+                    <button class="lang-btn-footer active" data-lang="en">English</button>
+                    <button class="lang-btn-footer" data-lang="th">ไทย</button>
+                    <button class="lang-btn-footer" data-lang="zh">中文</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script>
+    function copyCoupon(btn) {
+        var code = btn.closest('.coupon-card').querySelector('.coupon-code-display').textContent;
+        navigator.clipboard.writeText(code).then(function() {
+            btn.textContent = 'Copied!';
+            btn.classList.add('copied');
+            setTimeout(function() {
+                btn.textContent = btn.getAttribute('data-i18n') === 'product.coupon.copy' ? 'Copy' :
+                    (document.querySelector('.lang-btn.active')?.getAttribute('data-lang') === 'zh' ? '复制' :
+                    (document.querySelector('.lang-btn.active')?.getAttribute('data-lang') === 'th' ? 'คัดลอก' : 'Copy'));
+                btn.classList.remove('copied');
+            }, 2000);
+        });
+    }
+    </script>
+    <script src="js/product.js"></script>
+    <script src="js/product-image-folders.js"></script>
+    <script src="js/product-media.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var hamburger = document.querySelector('.hamburger-btn');
+        var navMenu = document.querySelector('.nav-menu');
+        var overlay = document.querySelector('.mobile-nav-overlay');
+        if (!hamburger || !navMenu) return;
+        // Force close on page load
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('mobile-open');
+        if (overlay) {
+            overlay.style.display = 'none';
+            overlay.classList.remove('active');
+        }
+        document.body.style.overflow = '';
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.className = 'mobile-nav-overlay';
+            document.body.appendChild(overlay);
+        }
+        function openMenu() {
+            hamburger.classList.add('active');
+            navMenu.classList.add('mobile-open');
+            overlay.classList.add('active');
+            overlay.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMenu() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('mobile-open');
+            overlay.classList.remove('active');
+            setTimeout(function() { overlay.style.display = 'none'; }, 300);
+            document.body.style.overflow = '';
+        }
+        hamburger.addEventListener('click', function() {
+            if (navMenu.classList.contains('mobile-open')) closeMenu(); else openMenu();
+        });
+        overlay.addEventListener('click', closeMenu);
+        document.querySelectorAll('.nav-menu .dropdown > a').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth > 900) return;
+                e.preventDefault();
+                var dropdown = link.parentElement;
+                document.querySelectorAll('.nav-menu .dropdown.open').forEach(function(d) {
+                    if (d !== dropdown) d.classList.remove('open');
+                });
+                dropdown.classList.toggle('open');
+            });
+        });
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 900) closeMenu();
+        });
+    });
+    </script>
+
+
+<script>
+window.PRODUCT_TIKTOK_COUPONS = {"4": "AIMEM9O8ZMMZ", "6": "AIMEM9O8ZMMZ", "7": "AIMEM9O8ZMMZ", "8": "AIMEM9O8ZMMZ", "9": "AIMEM9O8ZMMZ", "10": "AIMEM9O8ZMMZ", "11": "AIMEM9O8ZMMZ", "12": "AIMEM9O8ZMMZ", "13": "AIMEM9O8ZMMZ", "14": "AIMEM9O8ZMMZ", "15": "BABYMW4MXZQU", "16": "BABYMW4MXZQU", "17": "BABYMW4MXZQU", "18": "BABYMW4MXZQU", "19": "BABYMW4MXZQU", "20": "AIMEM9O8ZMMZ", "21": "BABYMW4MXZQU", "22": "AIMEM9O8ZMMZ", "23": "BABYMW4MXZQU", "24": "BABYMW4MXZQU", "25": "AIMEM9O8ZMMZ", "26": "BABYMW4MXZQU", "28": "AIMEM9O8ZMMZ", "29": "AIMEM9O8ZMMZ", "30": "AIMEM9O8ZMMZ", "32": "AIMEM9O8ZMMZ", "33": "AIMEM9O8ZMMZ", "34": "AIMEM9O8ZMMZ"};
+</script>
+    <!-- Image Lightbox (Mobile) -->
+    <div class="lightbox-modal" id="lightboxModal" aria-modal="true" role="dialog" aria-label="Image viewer">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">‹</button>
+        <div class="lightbox-content" id="lightboxContent">
+            <div class="image-placeholder large img-portrait" id="lightboxPlaceholder" style="display:flex;align-items:center;justify-content:center;">
+                <img id="lightboxImage" src="" alt="Product image preview" style="display:none; width:100%; height:100%; object-fit:contain;">
+                <span id="lightboxText" style="color:#999;font-size:0.9rem;text-align:center;"></span>
+            </div>
+        </div>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">›</button>
+        <div class="lightbox-dots" id="lightboxDots"></div>
+    </div>
+
+</body>
+</html>

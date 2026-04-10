@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | beige Premium Baby Travel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500&family=IBM+Plex+Sans+Thai:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/beige logo.png?v=20260402" alt="beige" class="logo-img">
+            </a>
+            
+            
+            <button class="hamburger-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="mobile-nav-overlay"></div>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav.about">About Beige</a></li>
+                <li class="dropdown">
+                    <a href="collections.html" data-i18n="nav.collections">Collections</a>
+                                        <ul class="dropdown-menu">
+                        <li><a href="collections.html#strollers" data-i18n="nav.strollers">Strollers</a></li>
+                        <li><a href="collections.html#carseats" data-i18n="nav.carseats">Car Seats</a></li>
+                        <li><a href="collections.html#walkers" data-i18n="nav.walkers">Baby Walkers</a></li>
+                        <li><a href="collections.html#carriers" data-i18n="nav.carriers">Carriers</a></li>
+                        <li><a href="collections.html#outdoor" data-i18n="nav.outdoor">Outdoor</a></li>
+                        <li><a href="collections.html#mombags" data-i18n="nav.mombags">Mom Bags</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="active" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="th">TH</button>
+                    <button class="lang-btn" data-lang="zh">中文</button>
+                </div>
+                <button class="mobile-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <span class="page-label" data-i18n="contact.pageLabel">Contact Us</span>
+            <h1 class="page-title" data-i18n="contact.pageTitle">Get In Touch</h1>
+            <p class="page-subtitle" data-i18n="contact.pageSubtitle">We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-layout">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2 class="section-title" data-i18n="contact.sendMessage">Send Us a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" data-i18n="contact.form.name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact.form.email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" data-i18n="contact.form.phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" data-i18n="contact.form.subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="" data-i18n="contact.form.selectOption">Please select...</option>
+                                <option value="product" data-i18n="contact.form.optionProduct">Product Inquiry</option>
+                                <option value="order" data-i18n="contact.form.optionOrder">Order Status</option>
+                                <option value="support" data-i18n="contact.form.optionSupport">After-Sales Support</option>
+                                <option value="cooperation" data-i18n="contact.form.optionCooperation">Business Cooperation</option>
+                                <option value="other" data-i18n="contact.form.optionOther">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="contact.form.message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-wrapper">
+                    <h2 class="section-title" data-i18n="contact.connectTitle">Connect With Us</h2>
+                    <p class="contact-intro" data-i18n="contact.connectIntro">Feel free to reach out through any of these channels</p>
+                    
+                    <div class="contact-methods">
+                        <!-- Email -->
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <span>✉</span>
+                            </div>
+                            <div class="contact-details">
+                                <h4 data-i18n="contact.email">Email</h4>
+                                <p><a href="mailto:hello@beige.com">hello@beige.com</a></p>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <span>📞</span>
+                            </div>
+                            <div class="contact-details">
+                                <h4 data-i18n="contact.phone">Phone</h4>
+                                <p><a href="tel:+66XXXXXXXXX">+66 XX XXX XXXX</a></p>
+                            </div>
+                        </div>
+
+                        <!-- Line -->
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <span>💬</span>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Line</h4>
+                                <p>-</p>
+                            </div>
+                        </div>
+
+                        <!-- Instagram -->
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <span>📷</span>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Instagram</h4>
+                                <p>-</p>
+                            </div>
+                        </div>
+
+                        <!-- Facebook -->
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <span>👤</span>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Facebook</h4>
+                                <p>-</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Hours -->
+                    <div class="business-hours">
+                        <h4 data-i18n="contact.hours">Business Hours</h4>
+                        <p data-i18n="contact.hoursValue">Monday - Friday: 9:00 - 18:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <p class="footer-tagline" data-i18n="footer.tagline">Gentle design for modern family travel</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">IG</a>
+                        <a href="#" class="social-link" aria-label="Facebook">FB</a>
+                        <a href="#" class="social-link" aria-label="Line">Line</a>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <h4 data-i18n="footer.products">Products</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="nav.strollers">Strollers</a></li>
+                        <li><a href="#" data-i18n="nav.carseats">Car Seats</a></li>
+                        <li><a href="#" data-i18n="nav.walkers">Baby Walkers</a></li>
+                        <li><a href="#" data-i18n="nav.carriers">Carriers</a></li>
+                        <li><a href="#" data-i18n="nav.outdoor">Outdoor</a></li>
+                        <li><a href="#" data-i18n="nav.mombags">Mom Bags</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 beige. <span data-i18n="footer.rights">All rights reserved.</span></p>
+                <div class="footer-lang">
+                    <button class="lang-btn-footer active" data-lang="en">English</button>
+                    <button class="lang-btn-footer" data-lang="th">ไทย</button>
+                    <button class="lang-btn-footer" data-lang="zh">中文</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var hamburger = document.querySelector('.hamburger-btn');
+        var navMenu = document.querySelector('.nav-menu');
+        var overlay = document.querySelector('.mobile-nav-overlay');
+        if (!hamburger || !navMenu) return;
+        // Force close on page load
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('mobile-open');
+        if (overlay) {
+            overlay.style.display = 'none';
+            overlay.classList.remove('active');
+        }
+        document.body.style.overflow = '';
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.className = 'mobile-nav-overlay';
+            document.body.appendChild(overlay);
+        }
+        function openMenu() {
+            hamburger.classList.add('active');
+            navMenu.classList.add('mobile-open');
+            overlay.classList.add('active');
+            overlay.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMenu() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('mobile-open');
+            overlay.classList.remove('active');
+            setTimeout(function() { overlay.style.display = 'none'; }, 300);
+            document.body.style.overflow = '';
+        }
+        hamburger.addEventListener('click', function() {
+            if (navMenu.classList.contains('mobile-open')) closeMenu(); else openMenu();
+        });
+        overlay.addEventListener('click', closeMenu);
+        document.querySelectorAll('.nav-menu .dropdown > a').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth > 900) return;
+                e.preventDefault();
+                var dropdown = link.parentElement;
+                document.querySelectorAll('.nav-menu .dropdown.open').forEach(function(d) {
+                    if (d !== dropdown) d.classList.remove('open');
+                });
+                dropdown.classList.toggle('open');
+            });
+        });
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 900) closeMenu();
+        });
+    });
+    </script>
+
+</body>
+</html>

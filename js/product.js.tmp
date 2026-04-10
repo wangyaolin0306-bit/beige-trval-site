@@ -1,0 +1,26 @@
+// Read the current file and check key lines
+with open('/Users/suprodog/.openclaw/workspace/beige-website/js/product.js') as f:
+    content = f.read()
+
+# Check the last 5 lines
+lines = content.split('\n')
+print('Last 5 lines:')
+for l in lines[-5:]:
+    print(repr(l))
+print()
+# Check for DOMContentLoaded in product.js
+if "DOMContentLoaded" in content:
+    print("DOMContentLoaded found in product.js")
+else:
+    print("DOMContentLoaded NOT found!")
+    
+# Check for langChange
+if "langChange" in content:
+    print("langChange found in product.js")
+else:
+    print("langChange NOT found!")
+
+# Check order of DOMContentLoaded vs langChange
+dl_idx = content.find("DOMContentLoaded")
+lc_idx = content.find("langChange")
+print(f"DOMContentLoaded at: {dl_idx}, langChange at: {lc_idx}")

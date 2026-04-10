@@ -1,0 +1,51 @@
+Product image upload guide
+
+Each product uses its own folder.
+
+Preferred folder naming:
+
+images/products/<product-id>-<product-name-zh>/
+
+Examples:
+
+images/products/1-餐盘推车/
+images/products/2-9912推车/
+
+The old folder format below is still supported for compatibility:
+
+images/products/<product-id>/
+
+Recommended file names:
+
+1. PRODUCT MAIN IMAGE 1.png
+2. PRODUCT MAIN IMAGE 2.png
+3. PRODUCT MAIN IMAGE 3.png
+4. PRODUCT MAIN IMAGE 4.png
+
+How they are used:
+
+- Product card cover image uses `PRODUCT MAIN IMAGE 1`
+- Product detail page uses all 4 images in order
+
+Supported extensions:
+
+.webp
+.png
+.jpg
+.jpeg
+.avif
+
+Examples:
+
+images/products/1-餐盘推车/PRODUCT MAIN IMAGE 1.png
+images/products/1-餐盘推车/PRODUCT MAIN IMAGE 2.png
+images/products/1-餐盘推车/PRODUCT MAIN IMAGE 3.png
+images/products/1-餐盘推车/PRODUCT MAIN IMAGE 4.png
+
+Notes:
+
+- The site automatically supports both:
+  - `images/products/1-餐盘推车/PRODUCT MAIN IMAGE 1.png`
+  - `images/products/1/detail-1.png`
+- The product card will use `PRODUCT MAIN IMAGE 1` first.
+- No code changes are needed after the files are uploaded with the correct names.

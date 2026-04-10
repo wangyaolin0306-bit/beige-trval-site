@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections | beige Premium Baby Travel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500&family=IBM+Plex+Sans+Thai:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/beige logo.png?v=20260402" alt="beige" class="logo-img">
+            </a>
+            
+            
+            <button class="hamburger-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="mobile-nav-overlay"></div>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav.about">About Beige</a></li>
+                <li class="dropdown">
+                    <a href="collections.html" class="active" data-i18n="nav.collections">Collections</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#strollers" data-i18n="nav.strollers">Strollers</a></li>
+                        <li><a href="#carseats" data-i18n="nav.carseats">Car Seats</a></li>
+                        <li><a href="#carriers" data-i18n="nav.carriers">Carriers</a></li>
+                        <li><a href="#accessories" data-i18n="nav.accessories">Travel Essentials</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="th">TH</button>
+                    <button class="lang-btn" data-lang="zh">中文</button>
+                </div>
+                <button class="mobile-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <span class="page-label" data-i18n="collections.pageLabel">Our Products</span>
+            <h1 class="page-title" data-i18n="collections.pageTitle">Collections</h1>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="category-filter">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all" data-i18n="collections.filter.all">All Products</button>
+                <button class="filter-btn" data-filter="strollers" data-i18n="collections.filter.strollers">Strollers</button>
+                <button class="filter-btn" data-filter="carseats" data-i18n="collections.filter.carseats">Car Seats</button>
+                <button class="filter-btn" data-filter="carriers" data-i18n="collections.filter.carriers">Carriers</button>
+                <button class="filter-btn" data-filter="walkers" data-i18n="collections.filter.walkers">Baby Walkers</button>
+                <button class="filter-btn" data-filter="outdoor" data-i18n="collections.filter.outdoor">Outdoor</button>
+                <button class="filter-btn" data-filter="mombags" data-i18n="collections.filter.mombags">Mom Bags</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                <!-- Products rendered by JavaScript -->
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination" id="pagination">
+                <!-- Pagination rendered by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Info Section -->
+    <section class="category-info">
+        <div class="container">
+            <div class="category-grid">
+                <div class="category-block" id="strollers">
+                    <div class="category-icon">
+                        <img src="images/STROLLER ICON.png" alt="Stroller" class="category-icon-img">
+                    </div>
+                    <h3 data-i18n="collections.cats.strollers.title">Strollers</h3>
+                    <p data-i18n="collections.cats.strollers.desc">
+                        From compact city strollers to premium all-terrain systems, 
+                        our range covers every family's lifestyle needs.
+                    </p>
+                </div>
+                <div class="category-block" id="carseats">
+                    <div class="category-icon">
+                        <img src="images/CAR SEAT ICON.png" alt="Car Seat" class="category-icon-img">
+                    </div>
+                    <h3 data-i18n="collections.cats.carseats.title">Car Seats</h3>
+                    <p data-i18n="collections.cats.carseats.desc">
+                        Safety-first designs with innovative features like 360° rotation 
+                        and advanced impact protection.
+                    </p>
+                </div>
+                <div class="category-block" id="carriers">
+                    <div class="category-icon">
+                        <img src="images/CARRIER ICON.png" alt="Carrier" class="category-icon-img">
+                    </div>
+                    <h3 data-i18n="collections.cats.carriers.title">Carriers</h3>
+                    <p data-i18n="collections.cats.carriers.desc">
+                        Ergonomic designs that support both parent and baby, 
+                        making every outing comfortable and close.
+                    </p>
+                </div>
+                <div class="category-block" id="walkers">
+                    <div class="category-icon">
+                        <img src="images/WALKER ICON.png" alt="Walker" class="category-icon-img">
+                    </div>
+                    <h3 data-i18n="collections.cats.walkers.title">Baby Walkers</h3>
+                    <p data-i18n="collections.cats.walkers.desc">
+                        Safe and supportive designs that help your little one take their first steps with confidence.
+                    </p>
+                </div>
+                <div class="category-block" id="outdoor">
+                    <div class="category-icon">
+                        <img src="images/OUTDOOR ICON.png" alt="Outdoor" class="category-icon-img">
+                    </div>
+                    <h3 data-i18n="collections.cats.outdoor.title">Outdoor</h3>
+                    <p data-i18n="collections.cats.outdoor.desc">
+                        Fun and safe outdoor adventures for your little one, wherever the journey takes you.
+                    </p>
+                </div>
+                <div class="category-block" id="mombags">
+                    <div class="category-icon">
+                        <img src="images/MOM BAG ICON.png" alt="Mom Bags" class="category-icon-img">
+                    </div>
+                    <h3 data-i18n="collections.cats.mombags.title">Mom Bags</h3>
+                    <p data-i18n="collections.cats.mombags.desc">
+                        Thoughtfully designed bags for modern parents — practical, stylish, and always within reach.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-i18n="collections.cta.title">Need help choosing?</h2>
+                <p data-i18n="collections.cta.text">Our team is here to help you find the perfect product for your family.</p>
+                <a href="contact.html" class="btn btn-primary" data-i18n="collections.cta.button">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <p class="footer-tagline" data-i18n="footer.tagline">Gentle design for modern family travel</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">IG</a>
+                        <a href="#" class="social-link">FB</a>
+                        <a href="#" class="social-link">Line</a>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <h4 data-i18n="footer.explore">Explore</h4>
+                    <ul>
+                        <li><a href="about.html" data-i18n="nav.about">About Beige</a></li>
+                        <li><a href="collections.html" data-i18n="nav.collections">Collections</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4 data-i18n="footer.products">Products</h4>
+                    <ul>
+                        <li><a href="#strollers" data-i18n="nav.strollers">Strollers</a></li>
+                        <li><a href="#carseats" data-i18n="nav.carseats">Car Seats</a></li>
+                        <li><a href="#carriers" data-i18n="nav.carriers">Carriers</a></li>
+                        <li><a href="#walkers" data-i18n="nav.babywalkers">Baby Walkers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="footer.contact">Contact</h4>
+                    <p data-i18n="footer.email">Email: hello@beige.com</p>
+                    <p data-i18n="footer.phone">Phone: +66 2 XXX XXXX</p>
+                    <p data-i18n="footer.hours">Mon-Fri: 9:00 - 18:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 beige. <span data-i18n="footer.rights">All rights reserved.</span></p>
+                <div class="footer-lang">
+                    <button class="lang-btn-footer active" data-lang="en">English</button>
+                    <button class="lang-btn-footer" data-lang="th">ไทย</button>
+                    <button class="lang-btn-footer" data-lang="zh">中文</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/collections.js"></script>
+    <script src="js/product-image-folders.js"></script>
+    <script src="js/product-media.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var hamburger = document.querySelector('.hamburger-btn');
+        var navMenu = document.querySelector('.nav-menu');
+        var overlay = document.querySelector('.mobile-nav-overlay');
+        if (!hamburger || !navMenu) return;
+        var catFilter = document.querySelector('.category-filter');
+        if (catFilter) { catFilter.style.visibility = ''; catFilter.style.opacity = ''; }
+        var catFilter = document.querySelector('.category-filter');
+        if (catFilter) { catFilter.style.visibility = ''; catFilter.style.opacity = ''; }
+        // Ensure menu is closed on page load
+        if (navMenu.classList.contains('mobile-open')) {
+            navMenu.classList.remove('mobile-open');
+        }
+        if (overlay) {
+            overlay.style.display = 'none';
+            overlay.classList.remove('active');
+        }
+        hamburger.classList.remove('active');
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.className = 'mobile-nav-overlay';
+            document.body.appendChild(overlay);
+        }
+        function openMenu() {
+            hamburger.classList.add('active');
+            navMenu.classList.add('mobile-open');
+            overlay.classList.add('active');
+            overlay.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMenu() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('mobile-open');
+            overlay.classList.remove('active');
+            setTimeout(function() { overlay.style.display = 'none'; }, 300);
+            document.body.style.overflow = '';
+        }
+        hamburger.addEventListener('click', function() {
+            if (navMenu.classList.contains('mobile-open')) closeMenu(); else openMenu();
+        });
+        overlay.addEventListener('click', closeMenu);
+        document.querySelectorAll('.nav-menu .dropdown > a').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth > 900) return;
+                e.preventDefault();
+                var dropdown = link.parentElement;
+                document.querySelectorAll('.nav-menu .dropdown.open').forEach(function(d) {
+                    if (d !== dropdown) d.classList.remove('open');
+                });
+                dropdown.classList.toggle('open');
+            });
+        });
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 900) closeMenu();
+        });
+    });
+    </script>
+
+</body>
+</html>

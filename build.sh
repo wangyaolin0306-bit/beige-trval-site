@@ -3,8 +3,9 @@ set -euo pipefail
 
 rm -rf dist
 mkdir -p dist
-rsync -a \
-  --exclude '.git' \
-  --exclude '.DS_Store' \
-  --exclude 'dist' \
-  ./ dist/
+
+find . -mindepth 1 -maxdepth 1 \
+  ! -name '.git' \
+  ! -name '.DS_Store' \
+  ! -name 'dist' \
+  -exec cp -R {} dist/ \;

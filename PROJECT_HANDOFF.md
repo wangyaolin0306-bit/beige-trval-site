@@ -9,6 +9,14 @@ Date: 2026-04-10
 - Cloudflare Pages deployment is working.
 - Public preview URL: `https://beige-trval-site.pages.dev/`
 - Custom domain is connected and already accessible.
+- Latest content fix: product detail page `Specifications` block now follows language switching.
+
+## Latest Work
+
+- Fixed the product detail page spec section so title and labels translate with the selected language.
+- Updated `js/product.js` and `js/product-media.js` to refresh spec labels/values on language change.
+- Added spec label IDs in `product-detail.html` so the section can be re-rendered cleanly.
+- Verified both JS files pass `node --check`.
 
 ## Domain
 
@@ -55,6 +63,12 @@ Notes:
 2. Update product data and/or folder mapping.
 3. Push to GitHub.
 4. Cloudflare Pages redeploys automatically.
+
+## Git Notes
+
+- One local repo state showed `No commits yet on main` and an empty `origin`.
+- A later push failed with `fetch first`, which means the remote `main` already had commits.
+- If that happens again, run `git fetch origin`, then `git pull origin main --allow-unrelated-histories`, then `git push origin main`.
 
 ## Notes
 
